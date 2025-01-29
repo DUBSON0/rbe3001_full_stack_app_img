@@ -26,18 +26,19 @@ To use this image, you can pull it from GitHub Container Registry:
 
 ```bash
 docker pull williamsobral1/rbe3001_stack:latest
-'''
+```
 
 ### Enable the USB post
 
-Use:
-
+Locate the bus the robot arm is on using:
+```bash
 dmesg | grep ttyUSB
-
-To locate which bus the robot arm is on, then replace the x with the bus and run:
-
+```
+Then replace x with the bus and run:
+```bash
 sudo chmod a+rw /dev/ttyUSBx
-
+```
 ### Running the Container
-
+```bash
 sudo docker run --privileged --device=/dev/ttyUSB -v /dev:/dev -p 5901:5901 -p 6080:6080 --shm-size=1024M ml:r2021b -vnc
+```
