@@ -26,6 +26,7 @@ To use this image, you can pull it from GitHub Container Registry:
 
 ```bash
 docker pull williamsobral1/rbe3001_stack:latest
+'''
 
 ### Enable the USB post
 
